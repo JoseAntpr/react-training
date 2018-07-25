@@ -1,4 +1,7 @@
 import React, { Component} from 'react';
+import PropTypes from 'prop-types';
+
+
 
 class Box extends Component {
     render() {
@@ -11,14 +14,24 @@ class Box extends Component {
 }
 
 class Article extends Component {
+    /* Las propTypes nos ayudarán a documentar nuestros componentes y ver con un vistazo que necesitan.  */
+    static   propTypes = {
+        author: PropTypes.string.isRequired
+    }
+
     render() {
+        const { author, children, date, title } = this.props;
         return (
             <section>
-                <h2>{this.props.title}</h2>
-                <p><em>Escrito por {this.props.author}</em></p>
-                <Box>{this.props.date}</Box>
+                <h2>{title}</h2>
+                { /* 
+                Condicion boolean que si la primera evalua a true entonces
+                renderiza lo segundo.
+                */}
+                { author && <p><em>Escrito por {author}</em></p>}
+                <Box>{date}</Box>
                 <article>
-                    {this.props.children}
+                    {children}
                 </article>
             </section>
         )
@@ -26,13 +39,18 @@ class Article extends Component {
     }
 }
 
+// Article.PropTypes = {
+//     author: PropTypes.string
+// }
+
 export default class Children extends Component {
+    /* Podemos pasarle cualquier tag html a nuestro children layout */
     render() {
         return (
             <div>
                 <h4>Children props</h4>
                 <Article
-                    author="Joseantpr"
+                    author='Joseantpr'
                     date={new Date().toLocaleDateString()}
                     title='Articulo de prop children'
                 >
