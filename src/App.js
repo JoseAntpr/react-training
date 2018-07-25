@@ -11,7 +11,8 @@ import './App.css';
 // import Children from './sections/children';
 // import Render from './sections/life-cycle/render';
 // import ComponentDidMount from './sections/life-cycle/componentDidMount';
-import FetchExample from './sections/fetch-example';
+// import FetchExample from './sections/fetch-example';
+import UpdateLifeCycleExample from './sections/life-cycle/updateLifeCyleExample';
 
 
 
@@ -20,11 +21,13 @@ class App extends Component {
     
     return (
       <div className="App">
-        <FetchExample />
         
+        <UpdateLifeCycleExample />
         
       
         {/*
+
+        <FetchExample />
         <Constructor />
         <ComponentWillMount />
         <Render />
