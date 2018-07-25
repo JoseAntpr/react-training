@@ -5,6 +5,7 @@ import CarsList from './sections/lists';
 import PropsApp from './sections/props';
 import Contador from './sections/contador';
 import Events from './sections/events';
+import Forms from './sections/forms';
 
 
 
@@ -13,12 +14,15 @@ class App extends Component {
     
     return (
       <div className="App">
-        <Events />
-        {/* <PropsApp />
+       <Forms />
+        {/*
+         <Events />
+        <PropsApp />
         <ConditionalSection />
          
         <CarsList />
-        <Contador contadorInicial={0}/> */}
+        <Contador contadorInicial={0}/> 
+        */}
       </div>
     );
   }
