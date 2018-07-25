@@ -1,9 +1,15 @@
 import React, { Component} from 'react';
 
+/* Refenrencias
+No es lo más común ni la mejor práctica, ya que hace que nuestro código 
+deje de ser declarativo.
+ref={inputElement => this.inputName = inputElement}
+*/
+
 export default class Forms extends Component {
-    handleClick (e) {
+    handleClick = (e) => {
         e.preventDefault();
-        const name = document.getElementById('name').value;
+        const name = this.inputName.value;
         const twitter = document.getElementById('twitter').value;
         console.log(name, twitter);
     }
@@ -18,7 +24,9 @@ export default class Forms extends Component {
                             id='name'
                             name='username'
                             placeholder='Introduzca su nombre'
+                            ref={inputElement => this.inputName = inputElement}
                             />
+                            
                     </p>
                     <p>
                     <label htmlFor='twitter'>Twitter: </label>
