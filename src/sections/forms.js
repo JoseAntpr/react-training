@@ -3,21 +3,25 @@ import React, { Component} from 'react';
 /* Refenrencias
 No es lo más común ni la mejor práctica, ya que hace que nuestro código 
 deje de ser declarativo.
-ref={inputElement => this.inputName = inputElement}
+    ref={inputElement => this.inputName = inputElement}
 */
 
 export default class Forms extends Component {
-    handleClick = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
         const name = this.inputName.value;
         const twitter = document.getElementById('twitter').value;
         console.log(name, twitter);
     }
+
+    handleChange = (e) => {
+        console.log('Handle Change', e.target.checked);
+    }
     render() {
         return (
             <div>
                 <h4>Formularios</h4>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <p>
                         <label htmlFor='name'>Nombre: </label>
                         <input
@@ -29,14 +33,21 @@ export default class Forms extends Component {
                             
                     </p>
                     <p>
-                    <label htmlFor='twitter'>Twitter: </label>
+                        <label htmlFor='twitter'>Twitter: </label>
                         <input
                             id='twitter'
                             name='twitterAccount'
                             placeholder='Introduzca su twitter'
                             />
                     </p>
-                    <button onClick={this.handleClick}>Enviar</button>
+                    <p>
+                        <label>
+                            <input onChange={this.handleChange} type="checkbox" />
+                            Aceptar condiciones
+                        </label>
+                    </p>
+                    
+                    <button>Enviar</button>
                 </form>
             </div>
         )
