@@ -9,8 +9,9 @@ import './App.css';
 // import Events from './sections/events';
 // import Forms from './sections/forms';
 // import Children from './sections/children';
-import Render from './sections/life-cycle/render';
-import ComponentDidMount from './sections/life-cycle/componentDidMount';
+// import Render from './sections/life-cycle/render';
+// import ComponentDidMount from './sections/life-cycle/componentDidMount';
+import FetchExample from './sections/fetch-example';
 
 
 
@@ -19,7 +20,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <ComponentDidMount />
+        <FetchExample />
         
         
       
@@ -27,6 +28,7 @@ class App extends Component {
         <Constructor />
         <ComponentWillMount />
         <Render />
+        <ComponentDidMount />
         <Children />
          <Forms />
          <Events />
