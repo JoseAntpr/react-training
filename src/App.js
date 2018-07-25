@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Constructor from './sections/life-cycle/constructor';
+// import Constructor from './sections/life-cycle/constructor';
+// import ComponentWillMount from './sections/life-cycle/componentWillMount';
 // import ConditionalSection from './sections/conditional';
 // import CarsList from './sections/lists';
 // import PropsApp from './sections/props';
@@ -8,6 +9,8 @@ import Constructor from './sections/life-cycle/constructor';
 // import Events from './sections/events';
 // import Forms from './sections/forms';
 // import Children from './sections/children';
+import Render from './sections/life-cycle/render';
+import ComponentDidMount from './sections/life-cycle/componentDidMount';
 
 
 
@@ -16,10 +19,14 @@ class App extends Component {
     
     return (
       <div className="App">
-        <Constructor />
+        <ComponentDidMount />
+        
         
       
         {/*
+        <Constructor />
+        <ComponentWillMount />
+        <Render />
         <Children />
          <Forms />
          <Events />
