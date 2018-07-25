@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import ConditionalSection from './sections/conditional';
-import CarsList from './sections/lists';
-import PropsApp from './sections/props';
-import Contador from './sections/contador';
-import Events from './sections/events';
-import Forms from './sections/forms';
+// import ConditionalSection from './sections/conditional';
+// import CarsList from './sections/lists';
+// import PropsApp from './sections/props';
+// import Contador from './sections/contador';
+// import Events from './sections/events';
+// import Forms from './sections/forms';
+import Children from './sections/children';
 
 
 
@@ -14,8 +15,11 @@ class App extends Component {
     
     return (
       <div className="App">
-       <Forms />
+
+        <Children />
+      
         {/*
+         <Forms />
          <Events />
         <PropsApp />
         <ConditionalSection />
