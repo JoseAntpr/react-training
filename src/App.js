@@ -12,9 +12,10 @@ import './App.css';
 // import Render from './sections/life-cycle/render';
 // import ComponentDidMount from './sections/life-cycle/componentDidMount';
 // import FetchExample from './sections/fetch-example';
-import UpdateLifeCycleExample from './sections/life-cycle/updateLifeCyleExample';
-import ComponentWillUnMount from './sections/life-cycle/componentWillUnmount';
-import ComponentDidCatch from './sections/life-cycle/componentDidCatch';
+// import UpdateLifeCycleExample from './sections/life-cycle/updateLifeCyleExample';
+// import ComponentWillUnMount from './sections/life-cycle/componentWillUnmount';
+// import ComponentDidCatch from './sections/life-cycle/componentDidCatch';
+import StatelessComponent from './sections/life-cycle/statelessComponent';
 
 
 
@@ -23,9 +24,8 @@ class App extends Component {
     
     return (
       <div className="App">
-        <ComponentDidCatch />
        
-        
+        <StatelessComponent />
       
         {/*
 
@@ -44,6 +44,7 @@ class App extends Component {
         <Contador contadorInicial={0}/> 
          <UpdateLifeCycleExample />
          <ComponentWillUnMount />
+         <ComponentDidCatch />
         */}
       </div>
     );
