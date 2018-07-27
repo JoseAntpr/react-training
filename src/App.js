@@ -14,6 +14,7 @@ import './App.css';
 // import FetchExample from './sections/fetch-example';
 import UpdateLifeCycleExample from './sections/life-cycle/updateLifeCyleExample';
 import ComponentWillUnMount from './sections/life-cycle/componentWillUnmount';
+import ComponentDidCatch from './sections/life-cycle/componentDidCatch';
 
 
 
@@ -22,8 +23,8 @@ class App extends Component {
     
     return (
       <div className="App">
-        
-       <ComponentWillUnMount />
+        <ComponentDidCatch />
+       
         
       
         {/*
@@ -42,6 +43,7 @@ class App extends Component {
         <CarsList />
         <Contador contadorInicial={0}/> 
          <UpdateLifeCycleExample />
+         <ComponentWillUnMount />
         */}
       </div>
     );
