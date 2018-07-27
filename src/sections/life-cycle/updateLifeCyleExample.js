@@ -44,6 +44,22 @@ class AnimaImage extends Component{
             })
     }
 
+    componentDidUpdate( prevProps, prevState) {
+        console.log('4. componentDidUpdate');
+        const img = document.querySelector('img');
+        img.animate([
+            {
+                filter: 'blur(2px)'
+            },
+            {
+                filter: 'blur(0px)'
+            }],{
+                duration: 1500,
+                easing: 'ease'
+            });
+            console.log('From img element', {alt: img.alt});
+    }
+
     render() {
         console.log('--> render')
         return (
