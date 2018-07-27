@@ -15,7 +15,8 @@ import './App.css';
 // import UpdateLifeCycleExample from './sections/life-cycle/updateLifeCyleExample';
 // import ComponentWillUnMount from './sections/life-cycle/componentWillUnmount';
 // import ComponentDidCatch from './sections/life-cycle/componentDidCatch';
-import StatelessComponent from './sections/life-cycle/statelessComponent';
+//import StatelessComponent from './sections/life-cycle/statelessComponent';
+import BitCointPriceContainer from './sections/life-cycle/container-component/index';
 
 
 
@@ -25,9 +26,11 @@ class App extends Component {
     return (
       <div className="App">
        
-        <StatelessComponent />
+        <BitCointPriceContainer />
       
         {/*
+
+        <StatelessComponent />
 
         <FetchExample />
         <Constructor />
